@@ -15,13 +15,14 @@
               console.log(mail_form.mail.value);
             }
 */
-var example = localStorage.getItem('example')
+var example = localStorage.getItem('sample')
             if (example == null){
               console.log("ローカルストレージnull");
-              let fruit = ["test"];
+              let fruit = [];
               const obj = JSON.stringify(fruit);
               localStorage.setItem('sample', obj);
             }
+            
             
 //HTMLのフォームから値を取得する関数サンプル
            const check = function () {
@@ -36,6 +37,7 @@ var example = localStorage.getItem('example')
             const test = localStorage.getItem('sample');
             var ObjJson = JSON.parse(test);
             console.log(typeof ObjJson);
+
             
             var contents = {
               "title":memo_form.title.value,
@@ -47,7 +49,30 @@ var example = localStorage.getItem('example')
             console.log(ObjJson);
             
             const obj = JSON.stringify(ObjJson);
-            localStorage.setItem('sample', obj);
+            const sample = localStorage.setItem('sample', obj);
+            //const hoge = localStorage.getItem('sample');
+            //const sample = localStorage.setItem('sample', hoge);
+            console.log(sample);
+          };
+            const hoge = localStorage.getItem('sample');
+            var ObjJson = JSON.parse(hoge);
+            //console.log(ObjJson[0].text);
+            var outputDiv = document.getElementById("output");
+            
+            //ObjJson.forEach(obj => {
+             for (let i = 0 ; i < ObjJson.length ; i++){
+     const objDiv = document.createElement('div');
+     objDiv.innerHTML = `title: ${ObjJson[i].title}, text: ${ObjJson[i].text}, tag: ${ObjJson[i].tag}`;
+     outputDiv.appendChild(objDiv);
+console.log(ObjJson[i].title);
+            }
+             
+            /*
+            for(var i = 0; i < ObjJson.length; i++ ){
+              console.log(ObjJson[i].text);
+            }
+            */
+            
             
             /*console.log(ObjJson);
             
@@ -104,7 +129,8 @@ ObjJson.title = memo_form.title.value;
 //console.log(typeof count);
 //memory[memory.length] = ObjJson;
 //console.log(memory);
-//myh1.innerHTML = ObjJson.title + ObjJson.text + ObjJson.tag
-          
-          };
+//var myh1 = document.getElementById("myh1");
+//myh1.innerHTML = sample.title
+        
+
 //          });
