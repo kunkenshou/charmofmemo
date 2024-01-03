@@ -25,19 +25,48 @@
               console.log(title,text,tag);
               */
             /*HTMLフォームの値を連想配列に代入するサンプル、このままだと、ローカルストレージ保存して呼び出すと扱いづらい*/
-            const memory = {
+            let fruit = [];
+
+            var contents = {
               "title":memo_form.title.value,
               "text":memo_form.text.value,
               "tag":memo_form.tag.value
             }
             
-            const StrJson = JSON.stringify(memory);
+            fruit.push(contents);
+            
+            //const count = memory.push("test2");
+            console.log(fruit);
+            /*
+            const StrJson = JSON.stringify(contents);
             //const obj = memory.toString()
             localStorage.setItem('sample', StrJson);
-            console.log(StrJson);
-            }
+            //console.log(StrJson);
+            
 //    });
-const ObjJson = JSON.parse(localStorage.getItem('sample'));
-console.log(ObjJson.tag);
+const sample = localStorage.getItem('sample')
 
-myh1.innerHTML = ObjJson.title + ObjJson.text + ObjJson.tag
+//console.log(sample)
+
+if (sample == null) {
+  console.log("sampleがありません");
+  myh1.innerHTML = "sampleがありません"
+} else {
+  const ObjJson = JSON.parse(sample);
+
+  //myh1.innerHTML = ObjJson.title + ObjJson.text + ObjJson.tag
+//console.log(ObjJson.tag);
+/*
+ObjJson.title = memo_form.title.value;
+              ObjJson.text = memo_form.text.value;
+              ObjJson.tag = memo_form.tag.value;
+*/
+//console.log(typeof memory);
+//console.log(typeof ObjJson);
+//const count = memory.push(ObjJson);
+//console.log(typeof count);
+//memory[memory.length] = ObjJson;
+//console.log(memory);
+//myh1.innerHTML = ObjJson.title + ObjJson.text + ObjJson.tag
+//}
+}
