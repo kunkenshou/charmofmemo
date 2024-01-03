@@ -1,0 +1,52 @@
+<!DOCTYPE html><!-- 文章型宣言 -->
+<html lang="ja"><!--HTML文章であることを指定-->
+<link href="css/style.css" rel="stylesheet"><!--外部CSS-->
+
+<head><!-- 閲覧者に表示するためおコンテンツ、HTMLページに含めたいのを収める-->
+  <meta charset="utf-8" /><!-- UTF-8を文章で使用するように設定-->
+  <meta name="viewport" content="width=device-width" />
+  <!-- ページがある幅をビューポートで描画されることを保証し、モバイルブラウザーがビューポートより広い幅でページを描画した上で縮小して表示されるのを防止-->
+  <title>THE Charm Of Memo</title><!--- ページのタイトルを指定 -->
+  <script src="js.js" defer></script>
+</head>
+<h1>メモの魅力</h1><p>The Charm Of Memo</p>
+<body><!-- テキスト、画像、ビデオ諸々、表示したいすべてのコンテンツが含まれる-->
+<!--
+<form action="" method="get" class="form-example">
+    <label for="title">Memo title: </label>
+    <input type="text" name="title" id="title" required />
+    <label for="story">Your memo:</label>
+<textarea id="story" name="story" rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+    <label for="tag">For tags: </label>
+    <input type="text" name="tag" id="tag" required />
+    <button type="button" onclick="submitForm()">送信</button>
+</form>
+-->
+<!--HTMLのフォームから値を取得するサンプル
+<form action="xxx.html" method="get" name="mail_form">
+          メールアドレス：<input type="text" name="mail">
+  <input type="button" value="Check" onclick="check()">
+</form>
+-->
+<!--HTMLのフォームから値を取得するサンプル2-->
+<form action="xxx.html" method="get" name="memo_form">
+    <label for="title">Memo title: </label>
+    <input type="text" name="title" id="title" required />
+    <label for="story">Your memo:</label>
+    <textarea id="story" name="text" rows="5" cols="33">
+    It was a dark and stormy night...
+    </textarea>
+    <label for="tag">For tags: </label>
+    <input type="text" name="tag" id="tag" required />
+
+    <input type="button" value="Check" onclick="check()">
+    
+    <h1 id="myh1">？</h1>
+    
+</form>
+
+</body>
+
+</html>
