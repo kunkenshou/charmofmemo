@@ -6,10 +6,6 @@
         console.log(formData)
       };
 
-      var myfunc1 = function () {
-      console.log("Hello world!");
-    };
-    
     //HTMLのフォームから値を取得する関数サンプル
 /*           var check = function () {
               console.log(mail_form.mail.value);
@@ -54,6 +50,7 @@ var example = localStorage.getItem('sample')
             //const sample = localStorage.setItem('sample', hoge);
             console.log(sample);
           };
+          
             const hoge = localStorage.getItem('sample');
             var ObjJson = JSON.parse(hoge);
             //console.log(ObjJson[0].text);

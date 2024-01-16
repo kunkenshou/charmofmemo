@@ -1,13 +1,13 @@
 <!DOCTYPE html><!-- 文章型宣言 -->
 <html lang="ja"><!--HTML文章であることを指定-->
-<link href="css/style.css" rel="stylesheet"><!--外部CSS-->
+<link href="css/main.css" rel="stylesheet"><!--外部CSS-->
 
 <head><!-- 閲覧者に表示するためおコンテンツ、HTMLページに含めたいのを収める-->
   <meta charset="utf-8" /><!-- UTF-8を文章で使用するように設定-->
   <meta name="viewport" content="width=device-width" />
   <!-- ページがある幅をビューポートで描画されることを保証し、モバイルブラウザーがビューポートより広い幅でページを描画した上で縮小して表示されるのを防止-->
   <title>THE Charm Of Memo</title><!--- ページのタイトルを指定 -->
-  <script src="js.js" defer></script>
+  <script src="js/main.js" defer></script>
 </head>
 <h1>メモの魅力</h1><p>The Charm Of Memo</p>
 <body><!-- テキスト、画像、ビデオ諸々、表示したいすべてのコンテンツが含まれる-->
@@ -32,18 +32,26 @@ It was a dark and stormy night...
 -->
 <!--HTMLのフォームから値を取得するサンプル2-->
 <form action="xxx.html" method="get" name="memo_form">
-    <label for="title">Memo title: </label>
-    <input type="text" name="title" id="title" required />
-    <label for="story">Your memo:</label>
-    <textarea id="story" name="text" rows="5" cols="33">
+      <label for="title">Memo title: </label>
+    <p>
+      <input type="text" name="title" id="title" required />
+    </p>
+      <label for="story">Your memo:</label>
+    <p>
+      <textarea id="story" name="text" rows="5" cols="33">
     It was a dark and stormy night...
-    </textarea>
-    <label for="tag">For tags: </label>
-    <input type="text" name="tag" id="tag" required />
-
-    <input type="button" value="Check" onclick="check()">
-    
-    <div id="output">？</div>
+      </textarea>
+    </p>
+    <p>
+      <label for="tag">For tags: </label>
+    </p>
+    <p>
+      <input type="text" name="tag" id="tag" required />
+    </p>
+    <p>
+      <input type="button" value="Check" onclick="check()">
+    </p>
+      <div id="output">？</div>
     
 </form>
 
